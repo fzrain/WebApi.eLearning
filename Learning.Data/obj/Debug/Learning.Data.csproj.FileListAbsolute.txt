@@ -1,0 +1,10 @@
+E:\waytoarchitect\eLearning\Learning.Data\bin\Debug\Learning.Data.dll.config
+E:\waytoarchitect\eLearning\Learning.Data\bin\Debug\Learning.Data.dll
+E:\waytoarchitect\eLearning\Learning.Data\bin\Debug\Learning.Data.pdb
+E:\waytoarchitect\eLearning\Learning.Data\bin\Debug\EntityFramework.dll
+E:\waytoarchitect\eLearning\Learning.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\waytoarchitect\eLearning\Learning.Data\bin\Debug\EntityFramework.xml
+E:\waytoarchitect\eLearning\Learning.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\waytoarchitect\eLearning\Learning.Data\obj\Debug\Learning.Data.dll
+E:\waytoarchitect\eLearning\Learning.Data\obj\Debug\Learning.Data.pdb
+E:\waytoarchitect\eLearning\Learning.Data\obj\Debug\Learning.Data.csprojResolveAssemblyReference.cache
