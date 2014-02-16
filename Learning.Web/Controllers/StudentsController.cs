@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Web.Http.Routing;
 using Learning.Data;
 using Learning.Data.Entities;
+using Learning.Web.Filters;
 using Learning.Web.Models;
 
 namespace Learning.Web.Controllers
@@ -52,7 +53,7 @@ namespace Learning.Web.Controllers
         }
 
         //ToDo: Apply Security Here
-    
+       [LearningAuthorize]
         public HttpResponseMessage Get(string userName)
         {
             try

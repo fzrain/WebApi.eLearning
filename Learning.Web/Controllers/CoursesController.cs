@@ -67,7 +67,7 @@ namespace Learning.Web.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
         }
-
+        [Learning.Web.Filters.ForceHttps()]
         public HttpResponseMessage Post([FromBody] CourseModel courseModel)
         {
             try

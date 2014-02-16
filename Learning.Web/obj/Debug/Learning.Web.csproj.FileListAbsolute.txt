@@ -29,4 +29,3 @@ E:\waytoarchitect\eLearning\Learning.Web\bin\Ninject.pdb
 E:\waytoarchitect\eLearning\Learning.Web\bin\Ninject.xml
 E:\waytoarchitect\eLearning\Learning.Web\bin\Ninject.Web.Common.pdb
 E:\waytoarchitect\eLearning\Learning.Web\bin\Ninject.Web.Common.xml
-E:\waytoarchitect\eLearning\Learning.Web\obj\Debug\Learning.Web.csprojResolveAssemblyReference.cache

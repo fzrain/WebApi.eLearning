@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Learning.Data;
 using Learning.Data.Entities;
+using Learning.Web.Filters;
 using Learning.Web.Models;
 
 namespace Learning.Web.Controllers
@@ -36,6 +37,7 @@ namespace Learning.Web.Controllers
 
         }
 
+         [LearningAuthorize]
         public HttpResponseMessage Post(int courseId, [FromUri]string userName, [FromBody]Enrollment enrollment)
         {
             try

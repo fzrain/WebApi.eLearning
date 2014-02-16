@@ -107,6 +107,8 @@
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\EnrollmentsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Filters\ForceHttpsAttribute.cs" />
+    <Compile Include="Filters\LearningAuthorizeAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -118,6 +120,7 @@
     <Compile Include="Models\SubjectModel.cs" />
     <Compile Include="Models\TutorModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\NinjectWebApiFilterProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
