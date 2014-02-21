@@ -48,6 +48,19 @@ namespace Learning.Web.Models
                 EnrollmentsCount = student.Enrollments.Count(),
             };
         }
+
+        public StudentV2BaseModel CreateV2Summary(Student student)
+        {
+            return new StudentV2BaseModel()
+            {
+                Url = _UrlHelper.Link("Students", new { userName = student.UserName }),
+                Id = student.Id,
+                FullName = string.Format("{0} {1}", student.FirstName, student.LastName),
+                Gender = student.Gender,
+                EnrollmentsCount = student.Enrollments.Count(),
+                CoursesDuration = Math.Round(student.Enrollments.Sum(c => c.Course.Duration))
+            };
+        }
         public CourseModel Create(Course course)
         {
             return new CourseModel()

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Dispatcher;
+using Learning.Web.Services;
 using Newtonsoft.Json.Serialization;
 
 namespace Learning.Web
@@ -33,6 +35,8 @@ namespace Learning.Web
         );
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            //Replace the controller configuration selector
+            config.Services.Replace(typeof(IHttpControllerSelector), new LearningControllerSelector((config)));
 
         }
     }
