@@ -17,7 +17,7 @@ namespace Learning.Web.Controllers
             : base(repo)
         {
         }
-
+        
         public Object Get(int page = 0, int pageSize = 10)
         {
             IQueryable<Course> query;

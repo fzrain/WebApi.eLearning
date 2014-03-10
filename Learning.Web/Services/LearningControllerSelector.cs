@@ -23,9 +23,12 @@ namespace Learning.Web.Services
             var controllers = GetControllerMapping(); //Will ignore any controls in same name even if they are in different namepsace
 
             var routeData = request.GetRouteData();
-
+            if (string.IsNullOrWhiteSpace(routeData.Route.RouteTemplate))
+            {
+               return   base.SelectController(request);
+            }
             var controllerName = routeData.Values["controller"].ToString();
-
+           
             HttpControllerDescriptor controllerDescriptor;
 
             if (controllers.TryGetValue(controllerName, out controllerDescriptor))

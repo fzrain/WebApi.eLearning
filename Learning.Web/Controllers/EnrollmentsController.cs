@@ -11,6 +11,7 @@ using Learning.Web.Models;
 
 namespace Learning.Web.Controllers
 {
+   
     public class EnrollmentsController : BaseApiController
     {
         public EnrollmentsController(ILearningRepository repo)
@@ -29,7 +30,7 @@ namespace Learning.Web.Controllers
             System.Web.HttpContext.Current.Response.Headers.Add("X-InlineCount", totalCount.ToString());
 
             var results = query
-                       
+
                         .ToList()
                         .Select(s => TheModelFactory.Create(s));
 
@@ -37,6 +38,32 @@ namespace Learning.Web.Controllers
 
         }
 
+        [Route("api/enrollments/{courseName}/{studentName?}")]
+        public IEnumerable<StudentBaseModel> GetStudentsInfo(string courseName, string studentName = "")
+        {
+            IQueryable<Student> query;
+            Course course=  TheRepository.GetAllCourses().Where(c => c.Name == courseName).FirstOrDefault();
+            if (course==null )
+            {
+                return null ;
+            }
+             query = TheRepository.GetEnrolledStudentsInCourse(course.Id).OrderBy(s => s.LastName);
+            if (!string.IsNullOrWhiteSpace(studentName))
+            {
+                query = query.Where(s => s.FirstName == studentName);
+            }
+            var totalCount = query.Count();
+
+            System.Web.HttpContext.Current.Response.Headers.Add("X-InlineCount", totalCount.ToString());
+
+            var results = query
+
+                        .ToList()
+                        .Select(s => TheModelFactory.Create(s));
+
+            return results;
+
+        }
          [LearningAuthorize]
         public HttpResponseMessage Post(int courseId, [FromUri]string userName, [FromBody]Enrollment enrollment)
         {
