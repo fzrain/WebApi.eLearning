@@ -30,3 +30,9 @@ E:\waytoarchitect\eLearning\Learning.Web\bin\Ninject.xml
 E:\waytoarchitect\eLearning\Learning.Web\bin\Ninject.Web.Common.pdb
 E:\waytoarchitect\eLearning\Learning.Web\bin\Ninject.Web.Common.xml
 E:\waytoarchitect\eLearning\Learning.Web\obj\Debug\Learning.Web.csprojResolveAssemblyReference.cache
+E:\waytoarchitect\eLearning\Learning.Web\bin\CacheCow.Common.dll
+E:\waytoarchitect\eLearning\Learning.Web\bin\CacheCow.Server.dll
+E:\waytoarchitect\eLearning\Learning.Web\bin\CacheCow.Common.xml
+E:\waytoarchitect\eLearning\Learning.Web\bin\CacheCow.Server.xml
+E:\waytoarchitect\eLearning\Learning.Web\bin\CacheCow.Server.EntityTagStore.SqlServer.dll
+E:\waytoarchitect\eLearning\Learning.Web\bin\CacheCow.Server.EntityTagStore.SqlServer.xml

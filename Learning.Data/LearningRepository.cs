@@ -47,6 +47,7 @@ namespace Learning.Data
         {
             return _ctx.Courses
                      .Include("Enrollments")
+                     .Include("Enrollments.Student")
                     .Include("CourseSubject")
                     .Include("CourseTutor")
                     .Where(c => c.Id == courseId)

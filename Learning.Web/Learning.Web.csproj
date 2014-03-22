@@ -38,6 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CacheCow.Common">
+      <HintPath>..\packages\CacheCow.Common.0.4.12\lib\net40\CacheCow.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CacheCow.Server">
+      <HintPath>..\packages\CacheCow.Server.0.4.12\lib\net40\CacheCow.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="CacheCow.Server.EntityTagStore.SqlServer">
+      <HintPath>..\packages\CacheCow.Server.EntityTagStore.SqlServer.0.4.11\lib\net40\CacheCow.Server.EntityTagStore.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\Learning.Data\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
